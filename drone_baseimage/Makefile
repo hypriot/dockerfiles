@@ -5,3 +5,5 @@ build:
 
 rmi:
 	docker rmi hypriot/builder_base
+
+rebuild: rmi build
