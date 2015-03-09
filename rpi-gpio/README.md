@@ -1,6 +1,6 @@
 # Build `gpio` binary from wiringPi and dockerize it
 
-This Dockerfile installs []() and compiles the `gpio` binary.
+This Dockerfile installs [wiringPi](http://wiringpi.com/download-and-install/) and compiles the `gpio` binary.
 
 ## Create Docker image
 
