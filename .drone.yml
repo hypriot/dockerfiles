@@ -1,4 +1,8 @@
 image: hypriot/dockerindocker
+
+git:
+  path: github.com/hypriot/dockerfiles
+
 script:
   - cd drone_baseimage
   - make build
