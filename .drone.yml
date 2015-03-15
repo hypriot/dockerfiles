@@ -4,6 +4,8 @@ git:
   path: github.com/hypriot/dockerfiles
 
 script:
+  - apt-get update
+  - apt-get install make
   - cd drone_baseimage
   - make build
 
