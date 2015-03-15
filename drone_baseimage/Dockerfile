@@ -25,10 +25,10 @@ RUN apt-get -q update \
                             tree \
                             xzip \
                             zip
-    && locale-gen en_US.UTF-8 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && pip install awscli
+RUN locale-gen en_US.UTF-8 \
+&& apt-get clean \
+&& rm -rf /var/lib/apt/lists/* \
+&& pip install awscli
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
