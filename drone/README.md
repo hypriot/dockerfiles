@@ -1,0 +1,1 @@
+This Dockerfile is used for drone on our buildserver
