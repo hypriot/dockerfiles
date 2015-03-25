@@ -1,8 +1,8 @@
 FROM ubuntu:14.04
 
-# Install pygments (for syntax highlighting)
+# Install pygments (for syntax highlighting) and git
 RUN apt-get -qq update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends python-pygments \
+    && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends python-pygments git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
