@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 # Install pygments (for syntax highlighting) and git
 RUN apt-get -qq update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends python-pygments git openssh-client \
+    && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends python-pygments git openssh-client ca-certificates\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
