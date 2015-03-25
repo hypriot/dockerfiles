@@ -4,6 +4,6 @@ build:
 	docker build -t hypriot/hugo:latest - < Dockerfile
 
 rmi:
-	docker rmi hypriot/hugo
+	docker rmi -f hypriot/hugo
 
 rebuild: rmi build
