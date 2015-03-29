@@ -8,15 +8,11 @@ script:
   - echo "+++++ start docker daemon +++++"
   - wrapdocker &
   - sleep 5
-  - echo "+++++ build docker image +++++"
-  - git log --oneline --name-status -1 | grep "M\|A" | dirname `awk -F " " '{print $2}'`| grep -v "\."
-  - cd $(git log --oneline --name-status -1 | grep "M\|A" | dirname `awk -F " " '{print $2}'`| grep -v "\.")
-  - pwd && ls -l
   - docker login --username=$$REGISTRY_USER --password=$$REGISTRY_PASSWORD --email=$$REGISTRY_USER_EMAIL $$REGISTRY_URL
+  - echo "+++++ build docker image +++++"
+  - cd $(git log --oneline --name-status -1 | grep "M\|A" | dirname `awk -F " " '{print $2}'`| grep -v "\.")
   - make imagename=$(git log --oneline --name-status -1 | grep "M\|A" | dirname `awk -F " " '{print $2}'`| grep -v "\.") build2
   - echo "+++++ stop docker daemon +++++"
   - start-stop-daemon --stop --pidfile "/var/run/docker.pid"
   - echo "#####################\n***** COMPLETED *****\n#####################"
-cache:
-  - /result
 
