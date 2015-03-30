@@ -6,7 +6,7 @@ See https://github.com/jonathanwiesel/slackus
 ## Build
 
 ```bash
-docker build -t slackus .
+docker build -t hypriot/slackus .
 ```
 
 ## Run
