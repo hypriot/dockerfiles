@@ -1,4 +1,4 @@
-image: hypriot/dockerindocker
+image: registry.hypriot.com/hypriot/dockerindocker
 docker:
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
@@ -15,3 +15,9 @@ script:
   - echo "+++++ stop docker daemon +++++"
   - start-stop-daemon --stop --pidfile "/var/run/docker.pid"
   - echo "#####################\n***** COMPLETED *****\n#####################"
+notify:
+  slack:
+    webhook_url: $$SLACK_WEBHOOK_URL
+    on_started: false
+    on_success: true
+    on_failure: true
