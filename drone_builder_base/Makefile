@@ -10,6 +10,6 @@ build:
 					
 					
 rmi:
-	docker rmi hypriot/drone_builder_base
+	docker rmi -f hypriot/drone_builder_base
 
 rebuild: rmi build
