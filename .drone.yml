@@ -15,4 +15,3 @@ script:
   - echo "+++++ stop docker daemon +++++"
   - start-stop-daemon --stop --pidfile "/var/run/docker.pid"
   - echo "#####################\n***** COMPLETED *****\n#####################"
-
