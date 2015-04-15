@@ -18,7 +18,6 @@ RUN apt-get -q update \
                             libncurses5-dev \
                             lvm2 \
                             python-pip \
-                            python-pip \
                             qemu \
                             qemu-user-static \
                             quilt \
