@@ -1,0 +1,7 @@
+Origin: Hypriot
+Label: Hypriot
+Codename: wheezy
+Components: main
+Description: Apt repository for HypriotOS
+Architectures: armhf
+SignWith: E1CD9A5F
