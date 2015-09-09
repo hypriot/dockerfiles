@@ -7,7 +7,7 @@ This repository contains **Dockerfile** of [Haproxy](http://haproxy.1wt.eu/) for
 
 ### Base Docker Image
 
-* [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
+* [ubuntu](https://hub.docker.com/_/ubuntu/)
 
 
 ### Installation
