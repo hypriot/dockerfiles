@@ -1,0 +1,20 @@
+FROM alpine:3.3
+
+# Install pygments (for syntax highlighting) and git
+RUN apk add --update \
+py-pygments \
+git \
+openssh-client \
+ca-certificates \
+wget
+
+# Download and install hugo
+ENV HUGO_VERSION 0.13
+ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux_amd64
+ENV HUGO_URL https://github.com/spf13/hugo/releases/download/
+
+RUN wget -q ${HUGO_URL}v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz \
+-O /usr/local/${HUGO_BINARY}.tar.gz \
+&& tar xzf /usr/local/${HUGO_BINARY}.tar.gz -C /usr/local/ \
+&& rm /usr/local/${HUGO_BINARY}.tar.gz \
+&& ln -s /usr/local/${HUGO_BINARY}/${HUGO_BINARY} /usr/local/bin/hugo
