@@ -1,0 +1,10 @@
+slackus:
+  build: .
+  restart: always
+  environment:
+    - SLACKUS_DISQUS_API_KEY=4biV2IVZNmttOAhjRkpZ2D8vdOAB8POD5ohqFhvcJmFpVi0YLEFiczxa3B9xJvfA
+    - SLACKUS_DISQUS_API_SECRET=WwZhxYGg8GjZKtLzcJW8OF27r5i6wSQENjW0TlmC1pPIKocn6pjQVtdJ030kHDtz
+    - SLACKUS_DISQUS_ACCESS_TOKEN=499c9b0ea8874a9dac2e87de1ee4799f
+    - SLACKUS_DISQUS_FORUM=hypriot
+    - SLACKUS_SLACK_WEBHOOK=https://hooks.slack.com/services/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
+
